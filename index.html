@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>pokedex</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-base-200">
+    <header class="bg-red-600 text-white shadow-md">
+      <div class="mx-auto max-w-md px-4 py-5">
+        <h1 class="text-2xl font-bold">Pokédex</h1>
+        <p class="text-sm opacity-90">Gib den Namen eines Pokémon ein.</p>
+      </div>
+    </header>
+    <main class="mx-auto max-w-md px-4 py-6">
+      <div class="join w-full">
+        <input
+          id="eingabe"
+          type="text"
+          placeholder="z. B. pikachu"
+          class="input input-bordered join-item w-full"
+        />
+        <button id="suchen" class="btn btn-primary join-item">Suchen</button>
+      </div>
+
+      <section id="ausgabe" class="mt-6">
+        <p class="text-center text-base-content/60">
+          Noch nichts gesucht. Gib oben einen Namen ein.
+        </p>
+      </section>
+    </main>
+    <footer
+      class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+    >
+      <aside>
+        <p>
+          Copyright © 2026 - All right reserved by Aylin Altintop Industries Ltd
+        </p>
+      </aside>
+    </footer>
+  </body>
+</html>
