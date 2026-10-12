@@ -19,24 +19,90 @@
         <h1 class="text-2xl font-bold">Pokédex</h1>
         <p class="text-sm opacity-90">Gib den Namen eines Pokémon ein.</p>
       </div>
+
+      <div
+        class="hero min-sm-screen"
+        style="background-image: url(pokemon-extra.jpg)"
+      >
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">
+              Bereit für die Suche Trainer?
+            </h1>
+            <p class="mb-5">
+              Entdecke die Daten von über 1000 Pokémon. Gib einfach den Namen
+              oder die Nummer ein und starte die Suche.
+            </p>
+            <button class="btn btn-primary">Los gehts!</button>
+          </div>
+        </div>
+      </div>
     </header>
-    <main class="mx-auto max-w-md px-4 py-6">
-      <div class="join w-full">
-        <input
-          id="eingabe"
-          type="text"
-          placeholder="z. B. pikachu"
-          class="input input-bordered join-item w-full"
-        />
-        <button id="suchen" class="btn btn-primary join-item">Suchen</button>
+    <main class="mx-auto max-w-5xl px-4 py-6">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
+        <aside class="md:col-span-1">
+          <div class="card bg-base-100 shadow-md">
+            <div class="card-body">
+              <h2 class="card-title">So funktioniert's</h2>
+              <ul class="list-disc space-y-2 pl-5 text-sm">
+                <li>
+                  Suche mit dem <strong>englischen</strong> Namen, z. B.
+                  <em>charmander</em>
+                </li>
+                <li>
+                  Oder gib eine <strong>Nummer</strong> von 1 bis 1025 ein
+                </li>
+                <li>Mit der Enter-Taste startest du die Suche</li>
+                <li>
+                  Namen mit Sonderzeichen schreibst du mit Bindestrich, z. B.
+                  <em>mr-mime</em>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card bg-base-100 mt-6 shadow-md">
+            <div class="card-body">
+              <h2 class="card-title">Weisheiten:</h2>
+              <p id="spruch" class="italic">Lade Spruch...</p>
+            </div>
+          </div>
+        </aside>
+
+        <div class="md:col-span-2">
+          <div class="join w-full">
+            <input
+              id="eingabe"
+              type="text"
+              placeholder="z. B. pikachu"
+              class="input input-bordered join-item w-full"
+            />
+            <button id="suchen" class="btn btn-primary join-item">
+              Suchen
+            </button>
+          </div>
+
+          <section id="ausgabe" class="mt-6">
+            <p class="text-center text-base-content/60">
+              Noch nichts gesucht. Gib oben einen Namen ein.
+            </p>
+          </section>
+        </div>
       </div>
 
-      <section id="ausgabe" class="mt-6">
-        <p class="text-center text-base-content/60">
-          Noch nichts gesucht. Gib oben einen Namen ein.
-        </p>
-      </section>
+      <select class="select select-bordered mt-6" id="sortierung">
+        <option value="id-auf">Kleinste Nummer zuerst</option>
+        <option value="id-ab">Größte Nummer zuerst</option>
+        <option value="name-auf">A bis Z</option>
+        <option value="name-ab">Z bis A</option>
+      </select>
+
+      <div
+        id="galerie"
+        class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 mt-6"
+      ></div>
     </main>
+
     <footer
       class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
     >

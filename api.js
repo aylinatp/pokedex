@@ -12,3 +12,14 @@ export async function getPokemon(pokemonName) {
     console.error(error);
   }
 }
+export async function getPokemonListe(anzahl) {
+  const liste = [];
+  for (let i = 1; i <= anzahl; i++) {
+    const pokemon = await getPokemon(i);
+    if (pokemon) {
+      liste.push(pokemon);
+    }
+  }
+
+  return liste;
+}
